@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
 
-const connectDB=mongoose.connect("mongodb+srv://Akshay123:veVttUaH6w87WK2@cluster0.kwkch.mongodb.net/DoBlog")
+const connectDB=async()=>{await mongoose.connect(process.env.MONGODB_URI)}
 
 module.exports=connectDB;
